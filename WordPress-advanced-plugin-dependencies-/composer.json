@@ -1,0 +1,38 @@
+{
+  "name": "afragen/advanced-plugin-dependencies",
+  "description": "Add plugin install dependencies tab, support for non dot org plugins, and information about dependencies.",
+  "type": "wordpress-plugin",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Andy Fragen",
+      "email": "andy@thefragens.com",
+      "homepage": "https://thefragens.com",
+      "role": "Developer"
+    }
+  ],
+  "support": {
+    "issues": "https://github.com/WordPress/advanced-plugin-dependencies/issues",
+    "source": "https://github.com/WordPress/advanced-plugin-dependencies"
+  },
+  "prefer-stable": true,
+  "require": {
+    "php": ">=7.0"
+  },
+  "require-dev": {
+    "wp-coding-standards/wpcs": "^3.0.0"
+  },
+  "config": {
+    "allow-plugins": {
+      "dealerdirect/phpcodesniffer-composer-installer": true
+    }
+  },
+  "scripts": {
+    "make-pot": [
+      "wp i18n make-pot . languages/advanced-plugin-dependencies.pot"
+    ],
+    "wpcs": [
+      "vendor/bin/phpcbf .; vendor/bin/phpcs ."
+    ]
+  }
+}
